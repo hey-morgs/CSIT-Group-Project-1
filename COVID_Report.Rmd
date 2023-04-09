@@ -55,6 +55,31 @@ Date fields are stored in MM/DD/YYYY format.
 
 ### Objective 1
 ```{r ob1}
+```{r ob1}
+confirmed_cases <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+covid_deaths <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
+cases_df <- read.csv(confirmed_cases, header = TRUE, na.strings = c("", " "))
+deaths_df <- read.csv(covid_deaths, header = TRUE, na.strings = c("", " "))
+data <- dplyr::select(cases_df, Province.State, Country.Region, X1.22.20) %>%
+  
+dplyr::filter(X1.22.20 != 0)
+most_cases <- data[which.max(data$X1.22.20), ]
+print(most_cases)
+# Filter for the first day and select relevant columns
+first_day <- cases %>%
+  filter(X1.22.20 != 0) %>%
+  select(Province.State, Country.Region, X1.22.20)
+# Identify the country with the highest confirmed cases
+max_cases <- first_day %>%
+  filter(X1.22.20 == max(X1.22.20)) %>%
+  pull(Country.Region)
+# Determine if the country is the origin of the outbreak
+if (max_cases == "China") {
+  print("The origin of the COVID-19 outbreak is China.")
+} else {
+  print("The origin of the COVID-19 outbreak is not China.")
+}
+
 ```
 
 ### Objective 2
