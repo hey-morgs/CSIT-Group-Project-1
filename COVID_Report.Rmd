@@ -47,7 +47,7 @@ Your and your partner's role is to play a data scientist from one of these two e
 ### Morgan Henderson 
 will be part of the GHU and will provide time series data counting COVID-19 related recoveries and and deaths.
 
-### Preena 
+### Preena Maruthavelu
 will be part of the PDL and will provide time series data counting COVID-19 related confirmations.
 
 ## Data
