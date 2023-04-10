@@ -1,0 +1,295 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Project 1},
+  pdfauthor={Name: Partner:},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Project 1}
+\author{Name:\\
+Partner:}
+\date{2023-04-09}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{background}{%
+\subsection{Background}\label{background}}
+
+The World Health Organization has recently employed a new data science
+initiative, \emph{CSIT-165}, that uses data science to characterize
+pandemic diseases. \emph{CSIT-165} disseminates data driven analyses to
+global decision makers.
+
+\emph{CSIT-165} is a conglomerate comprised of two fabricated entities:
+\emph{Global Health Union (GHU)} and \emph{Private Diagnostic
+Laboratories (PDL)}. Your and your partner's role is to play a data
+scientist from one of these two entities.
+
+\hypertarget{morgan-henderson}{%
+\subsubsection{Morgan Henderson}\label{morgan-henderson}}
+
+will be part of the GHU and will provide time series data counting
+COVID-19 related recoveries and and deaths.
+
+\hypertarget{preena}{%
+\subsubsection{Preena}\label{preena}}
+
+will be part of the PDL and will provide time series data counting
+COVID-19 related confirmations.
+
+\hypertarget{data}{%
+\subsection{Data}\label{data}}
+
+\begin{quote}
+\href{https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series}{2019
+Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by John Hopkins
+CSSE} Data for 2019 Novel Coronavirus is operated by the John Hopkins
+University Center for Systems Science and Engineering (JHU CSSE). Data
+includes daily time series CSV summary tables, including confirmations,
+recoveries, and deaths. Country/region are countries/regions hat conform
+to World Health Organization (WHO). Lat and Long refer to coordinates
+references for the user. Date fields are stored in MM/DD/YYYY format.
+\end{quote}
+
+\hypertarget{project-objectives}{%
+\subsection{Project Objectives}\label{project-objectives}}
+
+\hypertarget{objective-1}{%
+\subsubsection{Objective 1}\label{objective-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{confirmed\_cases }\OtherTok{\textless{}{-}} \StringTok{"https://raw.githubusercontent.com/CSSEGISandData/COVID{-}19/master/csse\_covid\_19\_data/csse\_covid\_19\_time\_series/time\_series\_covid19\_confirmed\_global.csv"}
+\NormalTok{covid\_deaths }\OtherTok{\textless{}{-}} \StringTok{"https://raw.githubusercontent.com/CSSEGISandData/COVID{-}19/master/csse\_covid\_19\_data/csse\_covid\_19\_time\_series/time\_series\_covid19\_deaths\_global.csv"}
+\CommentTok{\#load data}
+\NormalTok{cases\_df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(confirmed\_cases, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{na.strings =} \FunctionTok{c}\NormalTok{(}\StringTok{""}\NormalTok{, }\StringTok{" "}\NormalTok{))}
+\NormalTok{deaths\_df }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(covid\_deaths, }\AttributeTok{header =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{na.strings =} \FunctionTok{c}\NormalTok{(}\StringTok{""}\NormalTok{, }\StringTok{" "}\NormalTok{))}
+
+\CommentTok{\#segment first day of COVID data}
+\NormalTok{data\_cases }\OtherTok{\textless{}{-}}\NormalTok{ dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(cases\_df, Province.State, Country.Region, X1.}\FloatTok{22.20}\NormalTok{); }
+\NormalTok{data\_deaths }\OtherTok{\textless{}{-}}\NormalTok{ dplyr}\SpecialCharTok{::}\FunctionTok{select}\NormalTok{(deaths\_df, Province.State, Country.Region, X1.}\FloatTok{22.20}\NormalTok{)}
+
+\CommentTok{\#dplyr::filter(X1.22.20 != 0)}
+\CommentTok{\#most\_cases \textless{}{-} data\_cases[which.max(data\_cases$X1.22.20), ]}
+\CommentTok{\#print(most\_cases)}
+\CommentTok{\#most\_deaths \textless{}{-} data\_deaths[which.max(data\_deaths$X1.22.20), ]}
+\CommentTok{\#print(most\_deaths)}
+
+\CommentTok{\# Filter for the first day and select relevant columns}
+\NormalTok{first\_day\_cases }\OtherTok{\textless{}{-}}\NormalTok{ cases\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(X1.}\FloatTok{22.20} \SpecialCharTok{!=} \DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(Province.State, Country.Region, X1.}\FloatTok{22.20}\NormalTok{)}
+
+\NormalTok{first\_day\_deaths }\OtherTok{\textless{}{-}}\NormalTok{ deaths\_df }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(X1.}\FloatTok{22.20} \SpecialCharTok{!=} \DecValTok{0}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(Province.State, Country.Region, X1.}\FloatTok{22.20}\NormalTok{)}
+
+\CommentTok{\# Identify the country with the highest confirmed cases}
+\NormalTok{max\_cases }\OtherTok{\textless{}{-}}\NormalTok{ first\_day\_cases }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(X1.}\FloatTok{22.20} \SpecialCharTok{==} \FunctionTok{max}\NormalTok{(X1.}\FloatTok{22.20}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pull}\NormalTok{(Country.Region)}
+
+\NormalTok{max\_deaths }\OtherTok{\textless{}{-}}\NormalTok{ first\_day\_deaths }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(X1.}\FloatTok{22.20} \SpecialCharTok{==} \FunctionTok{max}\NormalTok{(X1.}\FloatTok{22.20}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{pull}\NormalTok{(Country.Region)}
+\CommentTok{\# Determine if the country is the origin of the outbreak}
+\ControlFlowTok{if}\NormalTok{(max\_cases }\SpecialCharTok{==}\NormalTok{ max\_deaths) \{}
+\NormalTok{  output }\OtherTok{\textless{}{-}} \FunctionTok{paste}\NormalTok{(}\StringTok{"The origin of the COVID{-}19 outbreak was likely"}\NormalTok{, max\_cases)}
+  \FunctionTok{print}\NormalTok{(output)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "The origin of the COVID-19 outbreak was likely China"
+\end{verbatim}
+
+\hypertarget{objective-2}{%
+\subsubsection{Objective 2}\label{objective-2}}
+
+\hypertarget{objective-3}{%
+\subsubsection{Objective 3}\label{objective-3}}
+
+\hypertarget{objective-4}{%
+\subsubsection{Objective 4}\label{objective-4}}
+
+\hypertarget{objective-4.1}{%
+\paragraph{Objective 4.1}\label{objective-4.1}}
+
+\hypertarget{objective-4.2}{%
+\paragraph{Objective 4.2}\label{objective-4.2}}
+
+\hypertarget{github-log}{%
+\subsubsection{GitHub Log}\label{github-log}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{git}\NormalTok{ log }\AttributeTok{{-}{-}pretty}\OperatorTok{=}\NormalTok{format:}\StringTok{"\%nSubject: \%s\%nAuthor: \%aN\%nDate: \%aD\%nBody: \%b"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Subject: adding *Morgan's* progress on Objective 1 from previous repo
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 11:44:24 -0700
+## Body: 
+## 
+## Subject: wget CSV for deaths (GHU)
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 11:40:55 -0700
+## Body: 
+## 
+## Subject: wget CSV file for confirmed cases (PDL)
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 11:40:37 -0700
+## Body: 
+## 
+## Subject: Added template
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 10:55:49 -0700
+## Body: 
+## 
+## Subject: Updated README with team member names
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 10:40:48 -0700
+## Body: 
+## 
+## Subject: Initial commit
+## Author: PreenaM
+## Date: Sun, 9 Apr 2023 10:34:23 -0700
+## Body:
+\end{verbatim}
+
+\end{document}
